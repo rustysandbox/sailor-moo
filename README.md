@@ -1,68 +1,84 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Rusty Sandbox Group Agreement
+Members: Sapana, Joachen, Steve & BomiBear
+    
+### User stories
+  
+### MVP
+As a User, I want to:
+see a list of anime news
+see how many votes and how many comments each news has
+write a comment for a news
+see the comment I wrote attached to that news
+add a star to the news if I like it
 
-In the project directory, you can run:
+As a Developer, I want to:
+create a database for comments.
+call the Avatar and Anime News API.
+create routes.
+create a user friendly interface
 
-### `npm start`
+Stretch Goals
+As a User, I want to:
+Delete my comment
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+As a Developer, I want to: 
+Cache the news and show the freshest
+Add a downvote functionality
+  
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+### Communication plan: 
+How will your group communicate with each other? 
+We will communicate verbally in person and in writing over slack.
+Use @ so that person gets a notification. Keep Slack questions late in the evening simple.
+What is your strategy for ensuring everyone's voices are heard, and that contributions from both loud and soft voices are listened to? 
+Whenever someone is talking, the whole group will listen.
+When a new idea is presented, everyone give constructive ideas related to it and recognizes the person’s idea.
+Do you have a plan for managing psychological safety?
+Check in on how everyone is doing regularly. Don’t be judgemental.
+Speak up when bothered by something. Go to someone else for support if needed. 
 
-### `npm test`
+  
+### Conflict plan: 
+What will your group do when it encounters conflict? What will your process be to resolve it?
+In the case of a disagreement, we will list out the pros and cons of each approach and make a decision as a group.
+Compromise. Hear each party out. Weigh passion and logical conviction into the equation. Identify the feeling and talk about the feeling if emotions get intense.
+If no resolution, we will rock-paper-scissors (best 2 out of 3)
+  
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Work plan: 
+How you will identify tasks, assign tasks, know when they are complete, and manage work in general? 
+We will use a Trello Board to keep track of tasks and who is working on what
+At the beginning of each day, we will go over what needs to be done and assign tasks.
+If you’re done with a task, help out another teammate who may be struggling.
+Code reviews will be done by 1 other person.
+If there is a conflict, the team should collectively decide what is best.
+If there is an agreement, a merge can happen.
+How will you make sure that everyone is contributing equally to all parts of the application, and that each person is working on "meaty" problems?
+Pair programming is an option.
+If a person thinks they can handle the task, they should speak up and break off to work on it solo.
+Enforce 15 min rule
+If a task is too difficult and the person is struggling for more than 15 mins, then they should pair up or ask for help.
+  
 
-### `npm run build`
+### Git process: 
+What is your Git flow? 
+Every will have their branch, push their branch to their remote branch, merge into dev and then to master if everyone agrees
+Only clean working code on master branch.  Make sure to comment your code.  The reviewer will check these comments.
+Naming convention for branches: day-yourName-feature.
+Commit messages have day-feature/whatYouFixed
+How many people must review a PR? 
+One person will review a pull before merging to the development branch, and everyone must review a pull request to master.
+If another pair of eyes is needed, a different person will take a look.
+Who merges PRs?
+The person or team who reviewed the pull request should be the one to merge the pull request.
+  
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### Anything else you feel is important: 
+Expectations around work times, 
+Show up at 9am, work until 6pm or later.
+standup times
+We will check in with each other at the beginning of each work day
+Before stand-up with the Instructional staff, we’ll have our own stand up
+taking breaks
+If you need it, take it. If someone feels that someone else is taking too many breaks, they should discuss it with the group.
