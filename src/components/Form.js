@@ -18,6 +18,7 @@ class Form extends Component {
 
   saveComment = e => {
     console.log("saved comment: " + this.state.comment);
+    this.setState({ comment: "" });
     e.preventDefault();
   };
 
