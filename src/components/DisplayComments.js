@@ -1,16 +1,19 @@
 import React, { Component, Fragment } from "react";
 
 class DisplayComments extends Component {
-  state = {  }
-  render() { 
-    return ( 
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    console.log("display ", this.props);
+    return (
       <Fragment>
         <ul>
-          <li>{this.props.comments}</li>
+          <li>Comment: {this.props.comment}</li>
         </ul>
       </Fragment>
-     );
+    );
   }
 }
- 
+
 export default DisplayComments;
