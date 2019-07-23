@@ -1,28 +1,36 @@
 import React, { Component, Fragment } from "react";
+import DisplayComments from "./DisplayComments";
 
 class Form extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      comment: ""
+      value: '',
+      comment: []
     };
   }
 
   submitComment = e => {
-    let comment = e.target.value;
-    this.setState({
-      comment
+    let newComment = e.target.value;
+    this.setState(val => {
+      const list = val.comment.push(newComment);
+      return {
+        list,
+        value: ''
+      }
     });
+    console.log('new' + this.state.comment);
   };
 
   saveComment = e => {
     console.log("saved comment: " + this.state.comment);
-    this.setState({ comment: "" });
+    this.setState({ comment: '' });
     e.preventDefault();
   };
 
   render() {
+    const comments = this.state.comment;
     return (
       <Fragment>
         <form onSubmit={this.saveComment}>
@@ -36,6 +44,7 @@ class Form extends Component {
             Submit
           </button>
         </form>
+        <DisplayComments comments={comments} />
       </Fragment>
     );
   }
