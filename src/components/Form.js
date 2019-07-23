@@ -6,11 +6,12 @@ class Form extends Component {
     super(props);
 
     this.state = {
-      comment: []
+      comment: [],
+      componentComment: ""
     };
   }
 
-  submitComment = e => {
+  changeComment = e => {
     let comment = e.target.value;
     this.setState({
       comment
@@ -19,12 +20,20 @@ class Form extends Component {
 
   saveComment = e => {
     console.log("saved comment: " + this.state.comment);
-    this.setState({ comment: "" });
+    // this.setState({
+    //   comment: "",
+    //   componentComment: this.state.comment
+    // });
+    this.props.updateBoxState({
+      comment: "",
+      componentComment: this.state.comment
+    });
     e.preventDefault();
   };
 
   render() {
     const comments = this.state.comment;
+    console.log("comments: " + comments);
     return (
       <Fragment>
         <form onSubmit={this.saveComment}>
@@ -32,13 +41,13 @@ class Form extends Component {
           <input
             type="text"
             value={this.state.comment}
-            onChange={this.submitComment}
+            onChange={this.changeComment}
           />
           <button type="submit" onClick={this.saveComment}>
             Submit
           </button>
         </form>
-        <DisplayComments comments={comments} />
+        <DisplayComments comment={this.props.componentComment} />
       </Fragment>
     );
   }
