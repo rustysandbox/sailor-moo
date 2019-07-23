@@ -1,11 +1,12 @@
 import React, { Component, Fragment } from "react";
+import DisplayComments from "./DisplayComments";
 
 class Form extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      comment: ""
+      comment: []
     };
   }
 
@@ -23,6 +24,7 @@ class Form extends Component {
   };
 
   render() {
+    const comments = this.state.comment;
     return (
       <Fragment>
         <form onSubmit={this.saveComment}>
@@ -36,6 +38,7 @@ class Form extends Component {
             Submit
           </button>
         </form>
+        <DisplayComments comments={comments} />
       </Fragment>
     );
   }
