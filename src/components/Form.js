@@ -6,26 +6,20 @@ class Form extends Component {
     super(props);
 
     this.state = {
-      value: '',
       comment: []
     };
   }
 
   submitComment = e => {
-    let newComment = e.target.value;
-    this.setState(val => {
-      const list = val.comment.push(newComment);
-      return {
-        list,
-        value: ''
-      }
+    let comment = e.target.value;
+    this.setState({
+      comment
     });
-    console.log('new' + this.state.comment);
   };
 
   saveComment = e => {
     console.log("saved comment: " + this.state.comment);
-    this.setState({ comment: '' });
+    this.setState({ comment: "" });
     e.preventDefault();
   };
 
