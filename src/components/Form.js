@@ -5,24 +5,34 @@ class Form extends Component {
     super(props);
 
     this.state = {
-      comment: "Hello World"
+      comment: ""
     };
   }
 
-  submitComment(e) {
+  submitComment = e => {
+    let comment = e.target.value;
+    this.setState({
+      comment
+    });
+  };
+
+  saveComment = e => {
+    console.log("saved comment: " + this.state.comment);
+    this.setState({ comment: "" });
     e.preventDefault();
-    console.log(this.state.comment);
-    const comment = e.target.value;
-    this.setState({ comment });
-  }
+  };
 
   render() {
     return (
       <Fragment>
-        <form>
+        <form onSubmit={this.saveComment}>
           <label>Type Comment Here</label>
-          <input type="text" placeholder="Type Comments Here" />
-          <button type="submit" onClick={this.submitComment}>
+          <input
+            type="text"
+            value={this.state.comment}
+            onChange={this.submitComment}
+          />
+          <button type="submit" onClick={this.saveComment}>
             Submit
           </button>
         </form>
