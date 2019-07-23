@@ -2,16 +2,14 @@ import React from "react";
 import "../App.css";
 import Header from "./Header";
 import Footer from "./Footer";
-import News from "./News";
-import Form from "./Form";
+import Box from "./Box";
 
 class App extends React.Component {
   render() {
     return (
       <React.Fragment>
         <Header />
-        <News />
-        <Form />
+        <Box />
         <Footer />
       </React.Fragment>
     );
