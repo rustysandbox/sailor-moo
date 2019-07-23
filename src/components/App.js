@@ -1,17 +1,18 @@
-import React from "react";
+import React, { Component, Fragment } from "react";
 import "../App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./Header";
 import Footer from "./Footer";
 import Box from "./Box";
 
-class App extends React.Component {
+class App extends Component {
   render() {
     return (
-      <React.Fragment>
+      <Fragment>
         <Header />
         <Box />
         <Footer />
-      </React.Fragment>
+      </Fragment>
     );
   }
 }
