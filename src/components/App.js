@@ -1,18 +1,26 @@
 import React, { Component, Fragment } from "react";
-import "../App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Header from "./Header";
-import Footer from "./Footer";
-import Box from "./Box";
 import News from "./News";
+import About from "./About";
+import Nav from "./Nav";
+
+function Home() {
+  return <h1>Sacred Toast Home Page</h1>;
+}
 
 class App extends Component {
   render() {
     return (
       <Fragment>
-        <Header />
-        <News />
-        <Footer />
+        <Router>
+          <Nav />
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/news" component={News} />
+          </Switch>
+        </Router>
       </Fragment>
     );
   }

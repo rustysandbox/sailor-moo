@@ -1,7 +1,5 @@
 import React, { Component, Fragment } from "react";
 import { BrowserRouter, Route, Link } from "react-router-dom";
-import { Button } from "reactstrap";
-import News from "./News";
 import DisplayComments from "./DisplayComments";
 import Form from "./Form";
 

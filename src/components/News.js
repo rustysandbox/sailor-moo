@@ -28,16 +28,13 @@ export default class News extends Component {
     console.log("news " + this.state.news);
     let newsData = this.state.news.map((item, key) => (
       <li key={key}>
-        {" "}
         {item.imageUrl} <Box />
       </li>
     ));
 
     return (
       <Fragment>
-        <ul>
-          <li>{newsData}</li>
-        </ul>
+        <ul>{newsData}</ul>
       </Fragment>
     );
   }

@@ -1,15 +1,15 @@
 import React, { Component, Fragment } from "react";
 
-class AboutUs extends Component {
+class About extends Component {
   state = {};
   render() {
     return (
       <Fragment>
-        <h1>The team</h1>
+        <h3>The team</h3>
         <p>hello</p>
       </Fragment>
     );
   }
 }
 
-export default AboutUs;
+export default About;
