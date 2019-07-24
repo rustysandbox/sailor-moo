@@ -6,8 +6,8 @@ class Nav extends Component {
     return (
       <Fragment>
         <nav>
-          <h2>Sacred Toast Nav Bar</h2>
-          <ul>
+          <h2>Sacred Toast</h2>
+          <ul className="nav-links">
             <Link to="/About">
               <li>About</li>
             </Link>

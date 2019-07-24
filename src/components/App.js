@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import News from "./News";
 import About from "./About";
 import Nav from "./Nav";
+import "./scss/core.scss";
 
 function Home() {
   return <h1>Sacred Toast Home Page</h1>;
