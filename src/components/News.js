@@ -1,11 +1,23 @@
-import React, { Component, Fragment } from "react";
+import React, { Component, Fragment, useState, useEffect } from "react";
 import Box from "./Box";
+import { async } from "q";
 
-export default class News extends Component {
+export default class article extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      news: [
+      article: [
+        // {
+        //   id: '',
+        //   reddit_gen_id: '',
+        //   url: '',
+        //   title: '',
+        //   source: '',
+        //   thumbnailurl: '',
+        //   created: '',
+        //   stars: ''
+        // }
+
         {
           name: "First{{i}} Last{{i}}",
           email: "first{{i}}@mail.com",
@@ -25,8 +37,11 @@ export default class News extends Component {
     };
   }
   render() {
-    console.log("news " + this.state.news);
-    let newsData = this.state.news.map((item, key) => (
+    // const articleData = async() => {
+    //   const data = await fetch('')
+    // }
+    console.log("article " + this.state.article);
+    let articleData = this.state.article.map((item, key) => (
       <li key={key}>
         {item.imageUrl} <Box />
       </li>
@@ -34,7 +49,7 @@ export default class News extends Component {
 
     return (
       <Fragment>
-        <ul>{newsData}</ul>
+        <ul>{articleData}</ul>
       </Fragment>
     );
   }
