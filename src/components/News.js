@@ -1,58 +1,75 @@
 import React, { Component, Fragment, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Box from "./Box";
-import { async } from "q";
-import Vote from './Vote';
+import Vote from "./Vote";
 
-export default class article extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      article: [
-        // {
-        //   id: '',
-        //   reddit_gen_id: '',
-        //   url: '',
-        //   title: '',
-        //   source: '',
-        //   thumbnailurl: '',
-        //   created: '',
-        //   stars: ''
-        // }
+function News() {
+  useEffect(() => {
+    fetchItems();
+  }, []);
 
-        {
-          name: "First{{i}} Last{{i}}",
-          email: "first{{i}}@mail.com",
-          imageUrl: "https://unsplash.it/50?image={{i}}"
-        },
-        {
-          name: "First{{i}} Last{{i}}",
-          email: "first{{i}}@mail.com",
-          imageUrl: "https://unsplash.it/50?image={{i}}"
-        },
-        {
-          name: "First{{i}} Last{{i}}",
-          email: "first{{i}}@mail.com",
-          imageUrl: "https://unsplash.it/50?image={{i}}"
-        }
-      ]
-    };
-  }
-  render() {
-    // const articleData = async() => {
-    //   const data = await fetch('')
-    // }
-    console.log("article " + this.state.article);
-    let articleData = this.state.article.map((item, key) => (
-      <li key={key}>
-        <Vote />
-        {item.imageUrl} <Box />
-      </li>
-    ));
+  const [item, setItem] = useState([]);
 
-    return (
-      <Fragment>
-        <ul>{articleData}</ul>
-      </Fragment>
-    );
-  }
+  const fetchItems = async () => {
+    console.log("this", this);
+
+    const data = await fetch("https://warm-cove-20229.herokuapp.com/news");
+
+    const items = await data.json();
+    setItem(items);
+  };
+
+  return (
+    <Fragment>
+      <ul>
+        {item.map((el, key) => (
+          <li key={key}>
+            <Vote />
+            {item[key].title} <Box />
+          </li>
+        ))}
+      </ul>
+    </Fragment>
+  );
 }
+
+export default News;
+// export default class article extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       article: [
+//         {
+//           name: "First{{i}} Last{{i}}",
+//           email: "first{{i}}@mail.com",
+//           imageUrl: "https://unsplash.it/50?image={{i}}"
+//         },
+//         {
+//           name: "First{{i}} Last{{i}}",
+//           email: "first{{i}}@mail.com",
+//           imageUrl: "https://unsplash.it/50?image={{i}}"
+//         },
+//         {
+//           name: "First{{i}} Last{{i}}",
+//           email: "first{{i}}@mail.com",
+//           imageUrl: "https://unsplash.it/50?image={{i}}"
+//         }
+//       ]
+//     };
+//   }
+//   render() {
+//     console.log("article " + this.state.article);
+//     let articleData = this.state.article.map((item, key) => (
+//       <li key={key}>
+//         <Vote />
+//         {item.imageUrl} <Box />
+//       </li>
+//     ));
+
+//     return (
+//       <Fragment>
+//         <ul>{articleData}</ul>
+//       </Fragment>
+//     );
+//   }
+// }
