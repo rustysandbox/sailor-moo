@@ -1,6 +1,7 @@
 import React, { Component, Fragment, useState, useEffect } from "react";
 import Box from "./Box";
 import { async } from "q";
+import Vote from './Vote';
 
 export default class article extends Component {
   constructor(props) {
@@ -43,6 +44,7 @@ export default class article extends Component {
     console.log("article " + this.state.article);
     let articleData = this.state.article.map((item, key) => (
       <li key={key}>
+        <Vote />
         {item.imageUrl} <Box />
       </li>
     ));
