@@ -1,10 +1,16 @@
-import React from "react";
+import React, { Component, Fragment } from "react";
+import Box from "./Box";
 
-export default class News extends React.Component {
+export default class News extends Component {
   constructor(props) {
     super(props);
     this.state = {
       news: [
+        {
+          name: "First{{i}} Last{{i}}",
+          email: "first{{i}}@mail.com",
+          imageUrl: "https://unsplash.it/50?image={{i}}"
+        },
         {
           name: "First{{i}} Last{{i}}",
           email: "first{{i}}@mail.com",
@@ -21,13 +27,18 @@ export default class News extends React.Component {
   render() {
     console.log("news " + this.state.news);
     let newsData = this.state.news.map((item, key) => (
-      <li key={key}> {item.imageUrl}</li>
+      <li key={key}>
+        {" "}
+        {item.imageUrl} <Box />
+      </li>
     ));
 
     return (
-      <div>
-        <ul>{newsData}</ul>
-      </div>
+      <Fragment>
+        <ul>
+          <li>{newsData}</li>
+        </ul>
+      </Fragment>
     );
   }
 }

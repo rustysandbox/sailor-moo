@@ -4,13 +4,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./Header";
 import Footer from "./Footer";
 import Box from "./Box";
+import News from "./News";
 
 class App extends Component {
   render() {
     return (
       <Fragment>
         <Header />
-        <Box />
+        <News />
         <Footer />
       </Fragment>
     );
