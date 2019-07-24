@@ -9,7 +9,7 @@ class DisplayComments extends Component {
     return (
       <Fragment>
         <ul>
-          <li>Comment: {this.props.comment}</li>
+          <li>{this.props.comment}</li>
         </ul>
       </Fragment>
     );

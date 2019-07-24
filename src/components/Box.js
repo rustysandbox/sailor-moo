@@ -1,7 +1,5 @@
 import React, { Component, Fragment } from "react";
 import { BrowserRouter, Route, Link } from "react-router-dom";
-import { Button } from "reactstrap";
-import News from "./News";
 import DisplayComments from "./DisplayComments";
 import Form from "./Form";
 
@@ -19,10 +17,8 @@ class Box extends Component {
   render() {
     return (
       <Fragment>
-        <News />
-
         <BrowserRouter>
-          <Link to="/displaycomment">Click to See comments</Link>
+          <Link to="/displaycomment">Show Comments</Link>
           <Route
             exact
             path="/displaycomment"
@@ -31,7 +27,7 @@ class Box extends Component {
             )}
           />
 
-          <Link to="/addcomment">Add a Comment</Link>
+          <Link to="/addcomment">Add Comment</Link>
           <Route
             exact
             path="/addcomment"

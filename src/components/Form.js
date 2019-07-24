@@ -19,11 +19,6 @@ class Form extends Component {
   };
 
   saveComment = e => {
-    console.log("saved comment: " + this.state.comment);
-    // this.setState({
-    //   comment: "",
-    //   componentComment: this.state.comment
-    // });
     this.props.updateBoxState({
       comment: "",
       componentComment: this.state.comment
@@ -33,7 +28,6 @@ class Form extends Component {
 
   render() {
     const comments = this.state.comment;
-    console.log("comments: " + comments);
     return (
       <Fragment>
         <form onSubmit={this.saveComment}>
