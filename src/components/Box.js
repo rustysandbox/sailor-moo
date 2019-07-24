@@ -35,6 +35,7 @@ class Box extends Component {
               <Form
                 updateBoxState={this.updateState}
                 componentComment={this.state.componentComment}
+                redditID={this.props.redditID}
               />
             )}
           />

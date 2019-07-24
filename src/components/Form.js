@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import DisplayComments from "./DisplayComments";
+import superagent from "superagent";
 
 class Form extends Component {
   constructor(props) {
@@ -24,6 +25,19 @@ class Form extends Component {
       componentComment: this.state.comment
     });
     e.preventDefault();
+    superagent
+      .post(
+        `https://warm-cove-20229.herokuapp.com/comment?id=${
+          this.props.redditID
+        }&message=${this.state.comment}`
+      )
+      .then(res => console.log(res)) //TODO: Draw Updated Comments
+      .catch(error => console.error(error));
+    // request.post('/user')
+    // .set('Content-Type', 'application/json')
+    // .send('{"name":"tj","pet":"tobi"}')
+    // .then(callback)
+    // .catch(errorCallback)
   };
 
   render() {
