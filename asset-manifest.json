@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/rustysandbox/sailor-moo/static/css/main.abe86555.chunk.css",
+    "main.js": "/rustysandbox/sailor-moo/static/js/main.e364eb21.chunk.js",
+    "main.js.map": "/rustysandbox/sailor-moo/static/js/main.e364eb21.chunk.js.map",
+    "runtime~main.js": "/rustysandbox/sailor-moo/static/js/runtime~main.c39cfc25.js",
+    "runtime~main.js.map": "/rustysandbox/sailor-moo/static/js/runtime~main.c39cfc25.js.map",
+    "static/css/2.266e55a5.chunk.css": "/rustysandbox/sailor-moo/static/css/2.266e55a5.chunk.css",
+    "static/js/2.0e51e978.chunk.js": "/rustysandbox/sailor-moo/static/js/2.0e51e978.chunk.js",
+    "static/js/2.0e51e978.chunk.js.map": "/rustysandbox/sailor-moo/static/js/2.0e51e978.chunk.js.map",
+    "index.html": "/rustysandbox/sailor-moo/index.html",
+    "precache-manifest.9d60c7128d3e4a78be9cfa68778855f6.js": "/rustysandbox/sailor-moo/precache-manifest.9d60c7128d3e4a78be9cfa68778855f6.js",
+    "service-worker.js": "/rustysandbox/sailor-moo/service-worker.js",
+    "static/css/2.266e55a5.chunk.css.map": "/rustysandbox/sailor-moo/static/css/2.266e55a5.chunk.css.map",
+    "static/css/main.abe86555.chunk.css.map": "/rustysandbox/sailor-moo/static/css/main.abe86555.chunk.css.map",
+    "static/media/thumbsUp.png": "/rustysandbox/sailor-moo/static/media/thumbsUp.60707ce4.png"
+  }
+}
