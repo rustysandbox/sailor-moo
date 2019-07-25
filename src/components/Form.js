@@ -31,7 +31,7 @@ class Form extends Component {
           this.props.redditID
         }&message=${this.state.comment}`
       )
-      .then(res => console.log(res)) //TODO: Draw Updated Comments
+      .then(res => console.log(res)) 
       .catch(error => console.error(error));
   };
 

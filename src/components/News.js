@@ -2,8 +2,6 @@ import React, { Fragment, useState, useEffect } from "react";
 import Box from "./Box";
 import Vote from "./Vote";
 import Nav from "./Nav";
-import { Link } from 'react-router-dom';
-
 
 function News() {
   useEffect(() => {
@@ -26,7 +24,7 @@ function News() {
         <ul>
           {item.map((el, key) => (
             <li key={key}>
-              <Vote />
+              <Vote redditID={item[key].id}/>
               <img className="thumbnail" src={item[key].thumbnailurl}></img>
               <h4>{item[key].title}</h4> <Box redditID={item[key].id} />
               
