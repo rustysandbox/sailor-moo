@@ -7,6 +7,10 @@ class Nav extends Component {
       <Fragment>
         <nav>
           <ul className="nav-links">
+            <Link to="/">
+            <li>Home</li>
+            </Link>
+
             <Link to="/News">
               <li>News</li>
             </Link>
