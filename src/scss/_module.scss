@@ -112,6 +112,32 @@ form {
 }
 //End style for form component
 
+//About
+.about {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  p {
+    font-family: "BenchNine", sans-serif;
+    color: $brown;
+    font-size: 1.5em;
+  }
+  ul {
+    text-align: center;
+    display: flex;
+    align-items: flex-start;
+    li {
+      flex: 0 50%;
+      img {
+        width: 75%;
+        height: 75%;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+//End About
+
 @media (min-width: 768px) {
   //App Component
   .hero {
