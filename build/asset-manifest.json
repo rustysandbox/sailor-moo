@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/sailor-moo/static/css/main.abe86555.chunk.css",
+    "main.js": "/sailor-moo/static/js/main.6c854c84.chunk.js",
+    "main.js.map": "/sailor-moo/static/js/main.6c854c84.chunk.js.map",
+    "runtime~main.js": "/sailor-moo/static/js/runtime~main.5386f9cc.js",
+    "runtime~main.js.map": "/sailor-moo/static/js/runtime~main.5386f9cc.js.map",
+    "static/css/2.266e55a5.chunk.css": "/sailor-moo/static/css/2.266e55a5.chunk.css",
+    "static/js/2.0e51e978.chunk.js": "/sailor-moo/static/js/2.0e51e978.chunk.js",
+    "static/js/2.0e51e978.chunk.js.map": "/sailor-moo/static/js/2.0e51e978.chunk.js.map",
+    "index.html": "/sailor-moo/index.html",
+    "precache-manifest.df1dcfaddc51f7fbe902c8b42935cb65.js": "/sailor-moo/precache-manifest.df1dcfaddc51f7fbe902c8b42935cb65.js",
+    "service-worker.js": "/sailor-moo/service-worker.js",
+    "static/css/2.266e55a5.chunk.css.map": "/sailor-moo/static/css/2.266e55a5.chunk.css.map",
+    "static/css/main.abe86555.chunk.css.map": "/sailor-moo/static/css/main.abe86555.chunk.css.map",
+    "static/media/thumbsUp.png": "/sailor-moo/static/media/thumbsUp.60707ce4.png"
+  }
+}
