@@ -27,7 +27,8 @@ class App extends Component {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/about" component={About} />
-            <Route path="/news" component={News} />
+            <Route path="/news" exact component={News} />
+            {/* <Route path="/news/thunbnailurl" component={this.props.item[key].thumbnailurl}></Route> */}
           </Switch>
         </Router>
       </Fragment>
