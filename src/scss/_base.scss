@@ -1,3 +1,7 @@
+$yellow: #f8f05d;
+$brown: #654512;
+$lightGreen: #a3c577;
+
 *,
 *::before,
 *::after {
@@ -11,5 +15,5 @@ h2 {
 
 body {
   margin: 0;
-  background-color: #a3c577;
+  background-color: $lightGreen;
 }

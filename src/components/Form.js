@@ -39,11 +39,11 @@ class Form extends Component {
     return (
       <Fragment>
         <form onSubmit={this.saveComment}>
-          <label>Type Comment Here</label>
           <input
             type="text"
             value={this.state.comment}
             onChange={this.changeComment}
+            placeholder="Type Comment Here"
           />
           <button type="submit" onClick={this.saveComment}>
             Submit

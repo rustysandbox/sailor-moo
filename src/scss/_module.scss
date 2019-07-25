@@ -4,8 +4,8 @@ li {
 
 a {
   :hover {
-    color: #f8f05d;
-    text-shadow: 2px 2px #654512;
+    color: $yellow;
+    text-shadow: 2px 2px $brown;
   }
 }
 
@@ -19,12 +19,16 @@ a {
 
 // News Component
 .news {
-  $color: #654512;
+  $color: $brown;
   font-family: "Shadows Into Light", cursive;
   font-size: 1.5em;
 
   h1 {
     text-shadow: 0 1px 0 lighten($color, 27);
+  }
+
+  h4 {
+    margin-bottom: 2%;
   }
 
   ul {
@@ -33,10 +37,10 @@ a {
     list-style: none;
 
     li {
-      background-color: #f8f05d;
+      background-color: $yellow;
       color: darken($color, 10);
       margin: 5% 10%;
-      border: 5px #654512 solid;
+      border: 5px $brown solid;
       border-radius: 5px;
       padding: 2%;
 
@@ -52,8 +56,48 @@ a {
       }
     }
   }
+
+  a {
+    color: $brown;
+    text-shadow: -0.5px 0 $lightGreen, 0 0.5px $lightGreen, 0.5px 0 $lightGreen,
+      0 -0.5px $lightGreen;
+    display: block;
+    margin: 3% 0;
+    font-family: "BenchNine", sans-serif;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $brown;
+      border-radius: 5px;
+      padding: 0.5%;
+      color: $lightGreen;
+      text-shadow: -1px 0 $brown, 0 1px $brown, 1px 0 $brown, 0 -1px $brown;
+    }
+  }
 }
 //End styles for News
+
+//Form Component
+form {
+  input[type="text"] {
+    width: 100%;
+    margin: 2% 0;
+  }
+  button {
+    border: 5px solid $lightGreen;
+    border-radius: 5px;
+    background-color: $brown;
+    color: $yellow;
+    margin: 2% 0;
+
+    &:hover {
+      border: 5px solid $brown;
+      background-color: $lightGreen;
+      color: $brown;
+    }
+  }
+}
+//End style for form component
 
 @media (min-width: 768px) {
   //App Component
@@ -69,4 +113,13 @@ a {
     }
   }
   //End style for App Component
+}
+
+@media (min-width: 768px) {
+  .news {
+    a {
+      display: inline;
+      margin: 0 1%;
+    }
+  }
 }
