@@ -1,4 +1,4 @@
-import React, { Component, Fragment, useState, useEffect } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import Box from "./Box";
 import Vote from "./Vote";
 
@@ -10,8 +10,6 @@ function News() {
   const [item, setItem] = useState([]);
 
   const fetchItems = async () => {
-    console.log("this", this);
-
     const data = await fetch("https://warm-cove-20229.herokuapp.com/news");
 
     const items = await data.json();

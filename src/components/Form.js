@@ -33,15 +33,9 @@ class Form extends Component {
       )
       .then(res => console.log(res)) //TODO: Draw Updated Comments
       .catch(error => console.error(error));
-    // request.post('/user')
-    // .set('Content-Type', 'application/json')
-    // .send('{"name":"tj","pet":"tobi"}')
-    // .then(callback)
-    // .catch(errorCallback)
   };
 
   render() {
-    const comments = this.state.comment;
     return (
       <Fragment>
         <form onSubmit={this.saveComment}>
