@@ -56,13 +56,10 @@ class DisplayComments extends Component {
       );
     }
 
-    let foo = this.createComment(this.state.comment);
     return (
       <Fragment>
         <ul>
-          {foo}
-          {/* <img src={`https://api.adorable.io/avatars/90/${this.props.}.png`}/>
-          <li>{this.state.comment && this.state.comment.map((el)=> el.comment)}</li> */}
+          {this.createComment(this.state.comment)}
         </ul>
       </Fragment>
     );
