@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import thumbsUp from '../assets/thumbsUp.png';
 
 class Vote extends Component {
   constructor(props) {
@@ -18,7 +19,7 @@ class Vote extends Component {
       <Fragment>
         <section className="vote">
           <h3>{this.state.currentNumberOfVote}</h3>
-          <img src="../../assets/thumbsUp.png" onClick={this.increaseVote} />
+          <img src={thumbsUp} onClick={this.increaseVote} />
         </section>
       </Fragment>
     );
