@@ -6,7 +6,17 @@ import About from "./About";
 import Nav from "./Nav";
 
 function Home() {
-  return <h1>Sacred Toast Home Page</h1>;
+  return (
+    <Fragment>
+      <section className="hero">
+        <div className="hero-inner">
+          <h1>Sacred Toast</h1>
+          <h2>News Aggregator</h2>
+          <Nav />
+        </div>
+      </section>
+    </Fragment>
+  );
 }
 
 class App extends Component {
@@ -14,7 +24,6 @@ class App extends Component {
     return (
       <Fragment>
         <Router>
-          <Nav />
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/about" component={About} />

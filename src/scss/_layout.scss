@@ -1,20 +1,43 @@
-.App {
-  text-align: center;
-}
-
 nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 10vh;
-  background: palegreen;
+  min-height: 20vh;
   color: black;
 }
 
 .nav-links {
-  width: 40%;
+  width: 80%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   list-style: none;
 }
+
+/* HERO IMAGE */
+.hero {
+  /* Sizing */
+  width: 100vw;
+  height: 100vh;
+
+  /* Flexbox stuff */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+
+  background-image: url(https://images.unsplash.com/photo-1554825203-68321ddde262?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1877&q=80);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  h1 {
+    /* Text styles */
+    font-size: 2em;
+    color: #654512;
+  }
+}
+/* END HERO IMAGE */
