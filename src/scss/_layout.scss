@@ -3,7 +3,17 @@ nav {
   justify-content: space-around;
   align-items: center;
   min-height: 20vh;
-  color: black;
+  li {
+    font-family: "Righteous", cursive;
+    font-size: 2em;
+    color: #654512;
+    text-shadow: 2px 2px $yellow;
+  }
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 .nav-links {
@@ -35,7 +45,7 @@ nav {
     /* Text styles */
     font-size: 3em;
     color: #654512;
-    text-shadow: 2px 2px #f8f05d;
+    text-shadow: 2px 2px $yellow;
   }
 
   h2 {
@@ -44,18 +54,8 @@ nav {
 }
 /* END HERO IMAGE */
 
-nav {
-  li {
-    font-family: "Righteous", cursive;
-    font-size: 2em;
-    color: #654512;
-    text-shadow: 2px 2px #f8f05d;
-  }
-}
-
 // Form Component Style
 form {
   margin-bottom: 2%;
 }
-
 // End Form Component Style
