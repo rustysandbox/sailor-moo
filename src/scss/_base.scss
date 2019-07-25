@@ -1,0 +1,19 @@
+$yellow: #f8f05d;
+$brown: #654512;
+$lightGreen: #a3c577;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  font-family: "Righteous", cursive;
+}
+
+body {
+  margin: 0;
+  background-color: $lightGreen;
+}

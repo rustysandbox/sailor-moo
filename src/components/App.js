@@ -4,10 +4,19 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import News from "./News";
 import About from "./About";
 import Nav from "./Nav";
-import "./scss/core.scss";
 
 function Home() {
-  return <h1>Sacred Toast Home Page</h1>;
+  return (
+    <Fragment>
+      <section className="hero">
+        <div className="inner">
+          <h1>Sacred Toast</h1>
+          <h2>Anime News Aggregator</h2>
+          <Nav />
+        </div>
+      </section>
+    </Fragment>
+  );
 }
 
 class App extends Component {
@@ -15,7 +24,6 @@ class App extends Component {
     return (
       <Fragment>
         <Router>
-          <Nav />
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/about" component={About} />

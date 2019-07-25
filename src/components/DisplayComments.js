@@ -1,40 +1,45 @@
-import React, { Component, Fragment, useState, useEffect } from "react";
-import superagent from 'superagent';
-import { async } from "q";
-
+import React, { Component, Fragment } from "react";
+import superagent from "superagent";
 
 class DisplayComments extends Component {
   constructor(props) {
     super(props);
-    this.state={
+    this.state = {
       comment: null
-    }
+    };
   }
 
   getComments = () => {
     console.log(this);
-    superagent.get(`https://warm-cove-20229.herokuapp.com/comments?id=${this.props.redditID}`).then(res => {
-  
-      this.setState({comment:res.body});
-    })
-  }
+    superagent
+      .get(
+        `https://warm-cove-20229.herokuapp.com/comments?id=${
+          this.props.redditID
+        }`
+      )
+      .then(res => {
+        this.setState({ comment: res.body });
+      });
+  };
 
-  createComment =(inputComment) => {
+  createComment = inputComment => {
     let comment = [];
-    inputComment.forEach((el,idx) => {
+    inputComment.forEach((el, idx) => {
       comment.push(
-        <li key={idx}> 
-          <img src={`https://api.adorable.io/avatars/90/${el.user_id}.png`}></img>
+        <li key={idx}>
+          <img
+            src={`https://api.adorable.io/avatars/90/${el.user_id}.png`}
+            alt="auto generated avatar"
+          />
           <p>{el.comment}</p>
         </li>
-      )
-    })
+      );
+    });
     return comment;
-}
-
+  };
 
   render() {
-    if (this.state.comment===null){
+    if (this.state.comment === null) {
       this.getComments();
       return (
         <Fragment>
@@ -42,10 +47,8 @@ class DisplayComments extends Component {
         </Fragment>
       );
     }
-  
-   
-    if(this.state.comment.length === 0){
-      
+
+    if (this.state.comment.length === 0) {
       return (
         <Fragment>
           <p>No comment!</p>
@@ -53,7 +56,7 @@ class DisplayComments extends Component {
       );
     }
 
-   let foo = this.createComment(this.state.comment);
+    let foo = this.createComment(this.state.comment);
     return (
       <Fragment>
         <ul>
