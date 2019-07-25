@@ -33,8 +33,12 @@ a {
     list-style: none;
 
     li {
+      background-color: #f8f05d;
       color: darken($color, 10);
-      margin: 5% 5% 5% 10%;
+      margin: 5% 10%;
+      border: 5px #654512 solid;
+      border-radius: 5px;
+      padding: 2%;
 
       &:before {
         display: inline-block;
