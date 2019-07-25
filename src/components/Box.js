@@ -23,7 +23,7 @@ class Box extends Component {
             exact
             path="/displaycomment"
             component={() => (
-              <DisplayComments comment={this.state.componentComment} />
+              <DisplayComments comment={this.state.componentComment} redditID = {this.props.redditID} />
             )}
           />
 

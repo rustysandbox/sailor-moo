@@ -27,7 +27,7 @@ class Form extends Component {
     e.preventDefault();
     superagent
       .post(
-        `https://warm-cove-20229.herokuapp.com/comment?id=${
+        `https://warm-cove-20229.herokuapp.com/comments?id=${
           this.props.redditID
         }&message=${this.state.comment}`
       )

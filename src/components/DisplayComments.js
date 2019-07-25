@@ -1,21 +1,65 @@
 import React, { Component, Fragment, useState, useEffect } from "react";
+import superagent from 'superagent';
+import { async } from "q";
 
 
 class DisplayComments extends Component {
   constructor(props) {
     super(props);
+    this.state={
+      comment: null
+    }
   }
 
-  getRandomInt() {
-    return Math.floor(Math.random() * Math.floor(1000));
+  getComments = () => {
+    console.log(this);
+    superagent.get(`https://warm-cove-20229.herokuapp.com/comments?id=${this.props.redditID}`).then(res => {
+  
+      this.setState({comment:res.body});
+    })
   }
+
+  createComment =(inputComment) => {
+    let comment = [];
+    inputComment.forEach((el,idx) => {
+      comment.push(
+        <li key={idx}> 
+          <img src={`https://api.adorable.io/avatars/90/${el.user_id}.png`}></img>
+          <p>{el.comment}</p>
+        </li>
+      )
+    })
+    return comment;
+}
+
+
   render() {
-    console.log("display ", this.props);
+    if (this.state.comment===null){
+      this.getComments();
+      return (
+        <Fragment>
+          <p>Loading</p>
+        </Fragment>
+      );
+    }
+  
+   
+    if(this.state.comment.length === 0){
+      
+      return (
+        <Fragment>
+          <p>No comment!</p>
+        </Fragment>
+      );
+    }
+
+   let foo = this.createComment(this.state.comment);
     return (
       <Fragment>
         <ul>
-          <img src={`https://api.adorable.io/avatars/90/${this.getRandomInt()}.png`}/>
-          <li>{this.props.comment}</li>
+          {foo}
+          {/* <img src={`https://api.adorable.io/avatars/90/${this.props.}.png`}/>
+          <li>{this.state.comment && this.state.comment.map((el)=> el.comment)}</li> */}
         </ul>
       </Fragment>
     );
