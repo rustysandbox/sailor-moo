@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 h1,
 h2 {
   font-family: "Righteous", cursive;
@@ -5,9 +11,5 @@ h2 {
 
 body {
   margin: 0;
-}
-
-nav li {
-  font-family: "Righteous", cursive;
-  font-size: 1.5em;
+  background-color: #a3c577;
 }

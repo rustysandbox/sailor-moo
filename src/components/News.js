@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect } from "react";
 import Box from "./Box";
 import Vote from "./Vote";
+import Nav from "./Nav";
 
 function News() {
   useEffect(() => {
@@ -18,14 +19,17 @@ function News() {
 
   return (
     <Fragment>
-      <ul>
-        {item.map((el, key) => (
-          <li key={key}>
-            <Vote />
-            {item[key].title} <Box redditID={item[key].id} />
-          </li>
-        ))}
-      </ul>
+      <Nav />
+      <section className="news">
+        <ul>
+          {item.map((el, key) => (
+            <li key={key}>
+              <Vote />
+              <h4>{item[key].title}</h4> <Box redditID={item[key].id} />
+            </li>
+          ))}
+        </ul>
+      </section>
     </Fragment>
   );
 }

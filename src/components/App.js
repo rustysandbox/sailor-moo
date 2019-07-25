@@ -9,9 +9,9 @@ function Home() {
   return (
     <Fragment>
       <section className="hero">
-        <div className="hero-inner">
+        <div className="inner">
           <h1>Sacred Toast</h1>
-          <h2>News Aggregator</h2>
+          <h2>Anime News Aggregator</h2>
           <Nav />
         </div>
       </section>

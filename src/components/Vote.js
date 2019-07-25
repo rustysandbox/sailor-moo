@@ -16,9 +16,9 @@ class Vote extends Component {
   render() {
     return (
       <Fragment>
-        <section>
+        <section className="vote">
           <h3>{this.state.currentNumberOfVote}</h3>
-          <button onClick={this.increaseVote}>Like</button>
+          <img src="../../assets/thumbsUp.png" onClick={this.increaseVote} />
         </section>
       </Fragment>
     );
